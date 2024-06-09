@@ -1,0 +1,131 @@
+@import "shared";
+
+.wrapper {
+  margin-bottom: 40px;
+  .container {
+    header {
+      @include flex-between();
+      padding: 20px 0;
+
+      .search {
+        @include flex-between();
+        max-width: 350px;
+        width: 100%;
+        border: 1px solid $MERCURY;
+        background-color: $LIGHTHOUSE;
+        padding: 15px 10px;
+        border-radius: 6px;
+
+        i {
+          color: $PATERNOSTER;
+          margin: 0 10px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        input {
+          max-width: 295px;
+          width: 100%;
+          background-color: inherit;
+        }
+      }
+
+      .about {
+        @include flex-between();
+        gap: 40px;
+
+        .navigation {
+          ul {
+            @include flex-between();
+            gap: 10px;
+            text-transform: capitalize;
+
+            li {
+              a {
+                color: #333;
+                font-weight: 600;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .icons {
+          @include flex-start();
+          gap: 10px;
+
+          i {
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+    background-color: $LYNX-WHITE;
+    box-shadow: 0px 15px 10px -15px #999;
+
+    .nav {
+      max-width: 60vw;
+      margin: 0 auto;
+      padding: 15px 0;
+
+      ul {
+        @include flex-between();
+
+        li {
+          a {
+            color: $CARBON;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navigation,
+.nav {
+  ul {
+    li {
+      a {
+        position: relative;
+
+        &:not(.logo a) {
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #ff4e84;
+            transition: width 0.3s ease;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        &:not(.logo a) {
+          &.active {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

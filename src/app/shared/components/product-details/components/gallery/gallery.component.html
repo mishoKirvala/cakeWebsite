@@ -1,0 +1,18 @@
+<div class="gallery-container">
+  <div class="thumb">
+    <div class="gallery-thumb">
+      @for (item of images; track $index) {
+      <div
+        class="thumb-img"
+        (click)="setMainImage(item)"
+        ngClass="{{ mainImage().src === item.src ? 'active' : '' }}"
+      >
+        <img src="{{ item.src }}" alt="{{ item.alt }}" />
+      </div>
+      }
+    </div>
+  </div>
+  <div class="main-image">
+    <img src="{{ mainImage().src }}" alt="{{ mainImage().alt }}" />
+  </div>
+</div>

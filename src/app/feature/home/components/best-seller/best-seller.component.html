@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="title">
+      <h2><a routerLink="best-seller">Our Best Sellers</a></h2>
+
+      <div class="view-all">
+        <a routerLink="best-seller">View All</a>
+      </div>
+    </div>
+
+    <div class="product-list">
+      @for (item of bestSeller; track $index) {
+      <app-product [product]="item" [home]="true"></app-product>
+      }
+    </div>
+  </div>
+</div>

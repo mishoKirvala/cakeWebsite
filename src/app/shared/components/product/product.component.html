@@ -1,0 +1,20 @@
+<div ngClass="{{ home ? 'home' : '' }}">
+  <div class="wrapper">
+    @if (product) {
+    <a routerLink="/cake" [queryParams]="{ id: product.id }">
+      <div class="product">
+        <div class="img">
+          <img [src]="product.img.src" [alt]="product.img.alt" />
+        </div>
+
+        <div class="title">
+          <p>{{ product.title }}</p>
+        </div>
+        <div class="price">
+          <p>$ {{ product.price }}</p>
+        </div>
+      </div>
+    </a>
+    }
+  </div>
+</div>

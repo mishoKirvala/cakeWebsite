@@ -1,0 +1,67 @@
+@import "shared";
+
+.wrapper {
+  max-width: 340px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+
+  .product {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &:hover {
+      .img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .img {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 5px;
+
+      img {
+        display: block;
+        width: 100%;
+        transition: all 0.7s ease;
+      }
+    }
+
+    .title,
+    .price {
+      margin-bottom: 10px;
+      color: $CARBON;
+      margin-left: 10px;
+    }
+
+    .title {
+      color: #292640;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+
+      p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 5px;
+      }
+    }
+
+    .price {
+      color: #251d34;
+      font-weight: 600;
+    }
+  }
+}
+
+.home {
+  .wrapper {
+    border: none;
+    padding: 8px;
+    background-color: #fff;
+  }
+}

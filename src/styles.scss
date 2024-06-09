@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import 'shared';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+.container {
+    max-width: 1920px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.fa-facebook-f {
+    color: $FACE;
+
+}
+
+.fa-instagram {
+    color: $INSTA;
+}
+
+.fa-whatsapp {
+    color: $WHATSAPP
+}

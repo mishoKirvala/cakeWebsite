@@ -1,0 +1,21 @@
+@import "shared";
+
+.container {
+  background-color: #f2f2f4;
+  padding: 30px;
+
+  h2 {
+    color: #251d34;
+    font-weight: 600;
+    letter-spacing: 1.33;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  .cakes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}

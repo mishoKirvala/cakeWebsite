@@ -1,0 +1,33 @@
+<div class="description-container">
+  <div class="title">
+    <p>Our Classic Chocolate Truffle Cake</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="price">
+    <p>{{ price() }}</p>
+  </div>
+
+  <div class="weight">
+    <ul>
+      @for (item of [0.5, 1, 1.5, 2]; track $index) {
+      <li
+        (click)="setWeight(item, $index)"
+        ngClass="{{ $index === index() ? 'active' : '' }}"
+      >
+        {{ item }} kg
+      </li>
+      }
+    </ul>
+  </div>
+
+  <div class="product-desc">
+    <h3>product description</h3>
+    <p>
+      The classic chocolate truffle cake layered with chocolate ganache frosting
+      & adorned with dark chocolate truffle glaze. The cake is further topped
+      with chocolate shards & toppings.
+    </p>
+  </div>
+</div>

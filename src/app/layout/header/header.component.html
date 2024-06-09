@@ -1,0 +1,69 @@
+<div class="wrapper">
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a routerLink="/">
+          <img src="../../../assets/images/logo/bakingo.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search cake" />
+      </div>
+
+      <div class="about">
+        <div class="navigation">
+          <ul>
+            <li>
+              <a routerLink="/about" [routerLinkActive]="'active'">about us</a>
+            </li>
+            <li>
+              <a routerLink="/contact" [routerLinkActive]="'active'">contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <nav>
+    <div class="nav">
+      <ul>
+        <li>
+          <a class="active" routerLink="/category" [routerLinkActive]="'active'"
+            >category</a
+          >
+        </li>
+        <li><a routerLink="/kids" [routerLinkActive]="['active']">kids</a></li>
+        <li>
+          <a routerLink="/birthday" [routerLinkActive]="['active']">birthday</a>
+        </li>
+        <li>
+          <a routerLink="/anniversary" [routerLinkActive]="['active']"
+            >anniversary</a
+          >
+        </li>
+        <li>
+          <a routerLink="/corporate" [routerLinkActive]="['active']"
+            >corporate</a
+          >
+        </li>
+        <li>
+          <a routerLink="/occasions" [routerLinkActive]="['active']"
+            >occasions</a
+          >
+        </li>
+        <li>
+          <a routerLink="/desserts" [routerLinkActive]="['active']">desserts</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

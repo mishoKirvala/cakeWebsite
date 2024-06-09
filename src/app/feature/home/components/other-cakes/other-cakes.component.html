@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Looking For Something Else</h2>
+
+  <div class="cakes">
+    @for (item of otherCakes; track $index) {
+    <a [routerLink]="item.route">
+      <img [src]="item.src" [alt]="item.alt" />
+    </a>
+    }
+  </div>
+</div>

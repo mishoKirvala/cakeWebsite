@@ -1,0 +1,161 @@
+@mixin font-regular-14 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+@mixin font-regular-16 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+@mixin font-regular-18 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-regular-20 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+@mixin font-regular-22 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+// bold
+
+@mixin font-bold-14 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-bold-16 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-bold-18 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-bold-20 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-bold-22 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+@mixin font-bold-28 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+@mixin font-bold-32 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+@mixin font-extra-bold-20 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+@mixin font-extra-bold-22 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+
+
+
+@mixin font-extra-bold-28 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+// flex
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@mixin flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin min($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin max($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}

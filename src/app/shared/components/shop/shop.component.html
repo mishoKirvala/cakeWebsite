@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="filter">
+    <!-- <div class="filter-category"> -->
+    <button>Filter <i class="fa-solid fa-filter"></i></button>
+    <!-- </div> -->
+
+    <div class="sort">
+      <p>Sort by:</p>
+      <select>
+        <option>Popularity</option>
+        <option>Price</option>
+        <option>name</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="product-list">
+    @for (item of productList; track $index) {
+    <app-product [product]="item"></app-product>
+    }
+  </div>
+</div>

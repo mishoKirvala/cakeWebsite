@@ -1,0 +1,78 @@
+@import "shared";
+
+.wrapper {
+  background-color: $UNICORN-SILVER;
+  margin-top: 40px;
+
+  .container {
+    footer {
+      @include flex-between();
+      padding: 15px 0;
+
+      .footer-nav {
+        @include flex-start();
+        gap: 40px;
+
+        .nav {
+          ul {
+            @include flex-start();
+            gap: 15px;
+
+            li {
+              a {
+                font-weight: 600;
+                font-size: 18px;
+                text-transform: capitalize;
+                color: #333;
+                position: relative;
+
+                &:not(.logo a) {
+                  &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -8px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 2px;
+                    background-color: #ff4e84;
+                    transition: width 0.3s ease;
+                  }
+                  &:hover {
+                    &::after {
+                      width: 100%;
+                    }
+                  }
+                }
+
+                &:not(.logo a) {
+                  &.active {
+                    &::after {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .icons {
+          @include flex-start();
+          gap: 10px;
+          font-size: 20px;
+          cursor: pointer;
+
+          i {
+            transition: all 0.5s ease;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
